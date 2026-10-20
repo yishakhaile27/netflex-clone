@@ -1,0 +1,94 @@
+.foot {
+    height: 100%;
+    background: black;
+    align-self: center;
+    color: #b3b3b3;
+}
+.container {
+    width: 100%;
+    margin: 0;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+.row a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.col {
+    box-sizing: border-box;
+}
+
+
+/* Extra small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+    .foot {
+        padding: 50px 30px;
+    }
+    .col {
+        flex: 0 0 50%;
+        padding: 10px 0 0 0;
+    }
+    .row a{
+        font-size: 10px;
+    }
+    .questions {
+        padding-bottom: 10px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 480px and up) */
+@media (min-width: 480px) and (max-width: 1024px) {
+    .foot {
+        padding: 50px 30px;
+    }
+    .col {
+        flex: 0 0 33.33%;
+        padding: 12px 0 0 0;
+    }
+    .row a{
+        font-size: 12px;
+    }
+}
+
+/* Extra Large & Large devices (landscape tablets, laptops/desktops, 1024px and up) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .foot {
+        padding: 50px 100px;
+    }
+    .col {
+        flex: 0 0 25%;
+        padding: 20px 0 0 0;
+    }
+    .row a{
+        font-size: 14px;
+    }
+    .questions {
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+}
+
+/* Extra extra large devices (very large desktops, 1440px and up) */
+@media (min-width: 1440px) {
+    .foot {
+        padding: 100px 200px;
+    }
+    .col {
+        flex: 0 0 25%;
+        padding: 30px 0 0 0;
+    }
+    .row a{
+        font-size: 24px;
+    }
+    .questions {
+        font-size: 34px;
+        padding-bottom: 20px;
+    }
+}

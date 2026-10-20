@@ -1,0 +1,472 @@
+.section {
+    background: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.br {
+    height: 8px;
+    width: 100%;
+    background: #242424;
+}
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.text {
+    width: 50%;
+}
+.text h1 {
+    font-size: 42px;
+    font-weight: 800;
+}
+.text p {
+    font-size: 24px;
+}
+
+/* Section 1 */
+
+.Enjoy {
+    display: flex;
+    justify-content: center;
+}
+.Enjoy img {
+    height: 300px;
+    background: none;
+    z-index: 1;
+}
+.Enjoy video {
+    width: 360px;
+    position: absolute;
+    padding-top: 10px;
+}
+
+/* Section 2 */
+
+.Downloadex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.phone {
+    height: 330px;
+}
+.Download {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    height: 110px;
+    width: 240px;
+    padding: 0 10px;
+    border: 2px solid #4d4d4d;
+    border-radius: 15px;
+    background: #000000;
+}
+.poster {
+    height: 90px;
+}
+.detail {
+    padding-left: 15px;
+}
+.detail h4 {
+    font-size: 20px;
+}
+.detail p {
+    font-size: 14px;
+    color: #004beb;
+}
+.icon {
+    height: 50px;
+}
+
+/* Section 4 */
+
+.kids {
+    height: 350px;
+}
+/* Section 5 */
+
+.section5 {
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+}
+
+.section5 h1 {
+    font-size: 36px;
+    font-weight: 800;
+    padding-bottom: 20px;
+}
+
+.box {
+    background: #2d2d2d;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.click {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+.click h2 {
+    font-size: 24px;
+    font-weight: 500;
+}
+.toggleButton {
+    border: none;
+    width: 40px;
+    background: transparent;
+    color: #ecf0f1;
+    cursor: pointer;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.content {
+    color: #ecf0f1;
+    display: none;
+    border-top: 1px solid black;
+    padding: 50px;
+    transition: all 0.5s;
+    text-align: start;
+}
+.content p {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.info {
+    margin-top: 20px;
+}
+
+/* Extra extra small devices (small phones, 320px and down) */
+@media (max-width: 425px) {
+    .intro {
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+        padding: 50px 0;
+    }
+    .text {
+        width: 90%;
+    }
+    .text h1 {
+        font-size: 20px;
+        font-weight: 800;
+    }
+    .text p {
+        font-size: 14px;
+    }
+    .Enjoy {
+        padding-top: 20px;
+    }
+    .Enjoy img {
+        height: 180px;
+    }
+    .Enjoy video {
+        width: 220px;
+        padding-top: 0;
+    }
+    .Downloadex {
+        order: 1;
+        padding-top: 20px;
+    }
+    .phone {
+        height: 250px;
+    }
+    .Download {
+        height: 80px;
+        width: 200px;
+        border-radius: 15px;
+    }
+    .poster {
+        height: 70px;
+    }
+    .detail h4 {
+        font-size: 16px;
+    }
+    .detail p {
+        font-size: 12px;
+    }
+    .icon {
+        height: 50px;
+    }
+    .kids {
+        height: 200px;
+        order: 2;
+    }
+    .section5 h1 {
+        font-size: 18px;
+    }
+    .click {
+        padding: 8px 20px;
+    }
+    .click h2 {
+        font-size: 14px;
+    }
+    .toggleButton {
+        font-size: 30px;
+    }
+    .content {
+        padding: 30px;
+    }
+    .content p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+
+/* Extra small devices (phones, 425px and up) */
+@media (min-width: 425px) and (max-width: 640px) {
+    .intro {
+        width: 90%;
+        padding: 50px 0;
+    }
+    .text h1 {
+        font-size: 20px;
+    }
+    .text p {
+        font-size: 14px;
+    }
+    .Enjoy img {
+        height: 130px;
+    }
+    .Enjoy video {
+        width: 160px;
+    }
+    .phone {
+        height: 200px;
+    }
+    .Download {
+        height: 60px;
+        width: 160px;
+        border-radius: 10px;
+    }
+    .poster {
+        height: 50px;
+    }
+    .detail h4 {
+        font-size: 14px;
+    }
+    .detail p {
+        font-size: 10px;
+    }
+    .icon {
+        height: 50px;
+    }
+    .kids {
+        height: 160px;
+    }
+    .section5 h1 {
+        font-size: 18px;
+    }
+    .click {
+        padding: 8px 20px;
+    }
+    .click h2 {
+        font-size: 14px;
+    }
+    .toggleButton {
+        font-size: 30px;
+    }
+    .content {
+        padding: 30px;
+    }
+    .content p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 640px and up) */
+@media (min-width: 640px) and (max-width: 768px) {
+    .intro {
+        width: 80%;
+        padding: 50px 0;
+    }
+    .text h1 {
+        font-size: 20px;
+    }
+    .text p {
+        font-size: 14px;
+    }
+    .Enjoy img {
+        height: 130px;
+    }
+    .Enjoy video {
+        width: 160px;
+    }
+    .phone {
+        height: 200px;
+    }
+    .Download {
+        height: 60px;
+        width: 160px;
+        border-radius: 10px;
+    }
+    .poster {
+        height: 50px;
+    }
+    .detail h4 {
+        font-size: 14px;
+    }
+    .detail p {
+        font-size: 10px;
+    }
+    .icon {
+        height: 50px;
+    }
+    .kids {
+        height: 160px;
+    }
+    .section5 h1 {
+        font-size: 18px;
+    }
+    .click {
+        padding: 8px 20px;
+    }
+    .click h2 {
+        font-size: 14px;
+    }
+    .toggleButton {
+        font-size: 30px;
+    }
+    .content {
+        padding: 30px;
+    }
+    .content p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .intro {
+        width: 80%;
+        padding: 50px 0;
+    }
+    .text h1 {
+        font-size: 34px;
+    }
+    .text p {
+        font-size: 18px;
+    }
+    .Enjoy img {
+        height: 220px;
+    }
+    .Enjoy video {
+        width: 265px;
+        padding-top: 10px;
+    }
+    .phone {
+        height: 260px;
+    }
+    .Download {
+        height: 75px;
+        width: 200px;
+        border-radius: 10px;
+    }
+    .poster {
+        height: 60px;
+    }
+    .detail h4 {
+        font-size: 16px;
+    }
+    .detail p {
+        font-size: 12px;
+    }
+    .icon {
+        height: 50px;
+    }
+    .kids {
+        height: 250px;
+    }
+    .section5 h1 {
+        font-size: 26px;
+    }
+    .click {
+        padding: 12px 25px;
+    }
+    .click h2 {
+        font-size: 18px;
+    }
+    .toggleButton {
+        font-size: 35px;
+    }
+    .content {
+        padding: 30px;
+    }
+    .content p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+/* Large devices (laptops/desktops, 1024px and up) */
+@media (min-width: 1024px) {
+    .intro {
+        width: 70%;
+        padding: 50px 0;
+    }
+    .text h1 {
+        font-size: 42px;
+    }
+    .text p {
+        font-size: 24px;
+    }
+    .Enjoy img {
+        height: 300px;
+    }
+    .Enjoy video {
+        width: 360px;
+        padding-top: 10px;
+    }
+    .phone {
+        height: 330px;
+    }
+    .Download {
+        height: 110px;
+        width: 240px;
+        border-radius: 15px;
+    }
+    .poster {
+        height: 90px;
+    }
+    .detail h4 {
+        font-size: 20px;
+    }
+    .detail p {
+        font-size: 14px;
+    }
+    .icon {
+        height: 50px;
+    }
+    .kids {
+        height: 350px;
+    }
+    .section5 h1 {
+        font-size: 36px;
+    }
+    .click {
+        padding: 15px 25px;
+    }
+    .click h2 {
+        font-size: 24px;
+    }
+    .toggleButton {
+        font-size: 40px;
+    }
+    .content {
+        padding: 50px;
+    }
+    .content p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}

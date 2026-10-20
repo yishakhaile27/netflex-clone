@@ -1,0 +1,447 @@
+.profile {
+    color: #1e1e1e;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px 50px 20px 25px;
+}
+
+.back_arrow{
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    position: absolute;
+    color: #1e1e1e;
+}
+.back_arrow svg {
+    font-size: 20px;
+}
+
+.profile_img {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+.profile_icon {
+    color: #d9232f;
+}
+.edit img {
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+}
+.edit span{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.457);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+.edit span svg {
+    padding: 0 0 5px 5px;
+    color: white;
+}
+.edit:hover span{
+    visibility: visible;
+}
+
+.br {
+    height: 0.5px;
+    width: 100%;
+    background: #c9c9c9;
+    margin: 20px 0;
+}
+
+.profile_main_container h3{
+    font-weight: 500;
+    color: #8b8b8e;
+}
+
+.membership_box {
+    border: 1px solid#bbbbbb;
+    border-radius: 8px;
+    padding: 20px 0 0 0;
+}
+.membership_date {
+    height: 20px;
+    border-radius: 0 22px 22px 0;
+}
+.membership_text {
+    padding: 20px 25px;
+}
+.premiumBackground {
+    background: radial-gradient(100% 200% at 100% 50%, rgb(229, 9, 20) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+}
+.standardBackground {
+    background: radial-gradient(100% 200% at 100% 50%, rgb(176, 56, 220) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+}
+.basicBackground {
+    background: radial-gradient(100% 200% at 100% 50%, rgb(109, 59, 227) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+}
+.mobileBackground {
+    background: radial-gradient(100% 200% at 100% 50%, rgb(33, 114, 227) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+}
+.membership_date p {
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+}
+.membership_text p {
+    padding: 10px 0;
+    color: #8b8b8e;
+}
+.membership_text a {
+    color: #000;
+    font-weight: 600;
+}
+
+.quicklinks h3 {
+    padding-top: 20px;
+}
+.quicklinks_box {
+    border: 1px solid#bbbbbb;
+    border-radius: 8px;
+}
+.quicklinks_box svg {
+    color: #3d3d3d;
+}
+.quicklinks_box p {
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.quicklinks_box a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile_main_container button {
+    width: 100%;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 30px 0;
+}
+.signout {
+    color: #fff;
+    background: #000;
+    border: none;
+}
+.signout:hover {
+    background: #4b4b4b;
+}
+.delete {
+    color: #c2111a;
+    background: none;
+    border: 1px solid #a6a6a6;
+}
+.delete:hover {
+    background: #eeeeee;
+}
+.profile_main_container .brs {
+    height: 0.5px;
+    width: 100%;
+    background: #c9c9c9;
+}
+
+
+/* Extra small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+    .profile_container {
+        padding: 15px 20px;
+    }
+    .back_arrow {
+        padding-top: 2px;
+    }
+    .profile_container h1 {
+        font-size: 24px;
+        padding-left: 30px;
+    }
+    .profile_icon {
+        font-size: 100px;
+        height: 100px;
+    }
+    .edit img {
+        width: 100px;
+    }
+    .edit span {
+        font-size: 30px;
+        width: 100px;
+        height: 100px;
+    }
+    .profile_text h4 {
+        font-size: 20px;
+        padding-bottom: 3px;
+    }
+    .profile_text p {
+        font-size: 14px;
+    }
+    .membership_date {
+        width: 200px;
+        padding: 10px 8px 10px 3px;
+    }
+    .membership_text {
+        padding: 10px 15px 12px 15px;
+    }
+    .membership_text .br {
+        margin: 8px 0 12px 0;
+    }
+    .quicklinks_box {
+        padding: 15px;
+    }
+    .profile_main_container button {
+        font-size: 16px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 480px and up) */
+@media (min-width: 480px) and (max-width: 1025px) {
+    .profile_container {
+        padding: 20px 40px;
+        align-items: center;
+    }
+    .profile_main_container {
+        max-width: 800px;
+    }
+    .back_arrow {
+        margin: 5px 0 0 -20px;
+    }
+    .profile_container h1 {
+        font-size: 30px;
+        padding-left: 8px;
+    }
+    .profile_icon {
+        font-size: 100px;
+        height: 120px;
+    }
+    .edit img {
+        width: 120px;
+    }
+    .edit span {
+        font-size: 30px;
+        width: 120px;
+        height: 120px;
+    }
+    .profile_text h4 {
+        font-size: 24px;
+        padding-bottom: 3px;
+    }
+    .profile_text p {
+        font-size: 16px;
+    }
+    .membership_date {
+        width: 210px;
+        padding: 10px 8px 10px 3px;
+    }
+    .membership_text {
+        padding: 15px 20px;
+    }
+    .membership_text .br {
+        margin: 8px 0 15px 0;
+    }
+    .quicklinks_box {
+        padding: 20px;
+    }
+    .profile_main_container button {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1025px) {
+    .back_arrow p {
+        display: none;
+    }
+    .profile_main_container {
+        width: 100%;
+    }
+    .profile_img {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    .profile_main_container h3{
+        font-size: 16px;
+        padding-bottom: 15px;
+    }
+    .membership_date p {
+        font-size: 14px;
+    }
+    .membership_text h2 {
+        font-size: 18px;
+    }
+    .membership_text p {
+        font-size: 14px;
+    }
+    .membership_text a {
+        font-size: 16px;
+    }
+    .quicklinks_box svg {
+        font-size: 20px;
+    }
+    .quicklinks_box p {
+        font-size: 14px;
+    }
+    .quicklinks_box .br {
+        margin: 15px 0;
+    }
+}
+@media (min-width: 1100px) and (max-width: 1440px) {
+    .profile_container {
+        padding: 20px 90px 20px 35px;
+    }
+}
+@media (min-width: 1250px) and (max-width: 1440px) {
+    .profile_container {
+        padding: 20px 35px;
+        align-items: center;
+    }
+}
+
+/* Extra Large & Large devices (landscape tablets, laptops/desktops, 1024px and up) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .profile_main_container {
+        width: 800px;
+    }
+    .profile_container h1 {
+        font-size: 40px;
+    }
+    .back_arrow{
+        font-size: 18px;
+        gap: 10px;
+        padding-top: 10px;
+    }
+    .profile_img {
+        align-items: center;
+        gap: 20px;
+    }
+    .profile_icon {
+        font-size: 150px;
+        height: 150px;
+    }
+    .edit img {
+        width: 150px;
+    }
+    .edit span{
+        font-size: 45px;
+        width: 150px;
+        height: 150px;
+    }
+    .profile_text h4 {
+        font-size: 30px;
+        padding-bottom: 3px;
+    }
+    .profile_text p {
+        font-size: 16px;
+    }
+    .profile_main_container h3{
+        font-size: 18px;
+        padding-bottom: 20px;
+    }
+    .membership_date {
+        width: 250px;
+        padding: 10px 8px 10px 3px;
+    }
+    .membership_text h2 {
+        font-size: 22px;
+    }
+    .membership_text p {
+        font-size: 16px;
+    }
+    .membership_text a {
+        font-size: 18px;
+    }
+    .quicklinks_box svg {
+        font-size: 24px;
+    }
+    .quicklinks_box {
+        padding: 20px 25px;
+    }
+    .profile_main_container button {
+        font-size: 20px;
+    }
+}
+
+/* Extra extra large devices (very large desktops, 1440px and up) */
+@media (min-width: 1440px) {
+    .profile_container {
+        align-items: center;
+        padding: 30px 50px 20px 40px;
+    }
+    .profile_main_container {
+        width: 800px;
+    }
+    .profile_container h1 {
+        font-size: 50px;
+    }
+    .back_arrow{
+        font-size: 22px;
+        gap: 10px;
+        padding-top: 10px;
+    }
+    .profile_img {
+        align-items: center;
+        gap: 20px;
+    }
+    .profile_icon {
+        font-size: 180px;
+        height: 180px;
+    }
+    .edit img {
+        width: 180px;
+    }
+    .edit span{
+        font-size: 50px;
+        width: 180px;
+        height: 180px;
+    }
+    .profile_text h4 {
+        font-size: 36px;
+    }
+    .profile_text p {
+        font-size: 20px;
+    }
+    .profile_main_container h3{
+        font-size: 22px;
+        padding-bottom: 20px;
+    }
+    .membership_date {
+        width: 270px;
+        padding: 10px 8px 10px 3px;
+    }
+    .membership_date p {
+        font-size: 18px;
+    }
+    .membership_text h2 {
+        font-size: 26px;
+    }
+    .membership_text p {
+        font-size: 20px;
+    }
+    .membership_text a {
+        font-size: 22px;
+    }
+    .quicklinks_box svg {
+        font-size: 28px;
+    }
+    .quicklinks_box p {
+        font-size: 18px;
+        gap: 15px;
+    }
+    .quicklinks_box {
+        padding: 25px;
+    }
+    .profile_main_container button {
+        font-size: 26px;
+    }
+}

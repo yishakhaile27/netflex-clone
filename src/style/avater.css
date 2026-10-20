@@ -1,0 +1,58 @@
+.imageGrid {
+    display: flex;
+    gap: 30px;
+}
+.hiddenCheckbox {
+    display: none;
+}
+.imgContainer img {
+    width: 130px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: outline 0.1s ease-in-out;
+}
+.imgContainer p {
+    margin: 5px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.error {
+    color: #eb3841;
+}
+
+  /* Extra small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+    .imageGrid {
+        gap: 10px;
+    }
+    .imgContainer img {
+        width: 65px;
+    }
+    .imgContainer p {
+        font-size: 8px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 480px and up) */
+@media (min-width: 480px) and (max-width: 720px) {
+    .imageGrid {
+        gap: 20px;
+    }
+    .imgContainer img {
+        width: 95px;
+    }
+    .imgContainer p {
+        font-size: 12px;
+    }
+}
+
+/* Extra extra large devices (very large desktops, 1440px and up) */
+@media (min-width: 1440px) {
+    .imgContainer img {
+        width: 150px;
+    }
+    .imgContainer p {
+        font-size: 16px;
+    }
+}

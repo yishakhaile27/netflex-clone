@@ -1,0 +1,40 @@
+.signup_foot {
+    background: #f3f3f3;
+    width: 100%;
+}
+.signup_foot_list {
+    padding: 20px 0px 40px 0px;
+    margin: 0 auto;
+    width: 90%;
+}
+.signup_foot a {
+    text-decoration: none;
+    color: #737373;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding-top: 15px;
+}
+.col a{
+    font-size: 14px;
+}
+.col {
+    flex: 0 0 25%;
+    box-sizing: border-box;
+    padding: 15px 0 0 0;
+}
+
+@media screen and (max-width: 740px) {
+    .col {
+        flex: 0 0 33.3%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+.col {
+      flex: 0 0 50%; /* Make each column take up an entire row on small screens */
+    }
+
+}

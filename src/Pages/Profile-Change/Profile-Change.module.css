@@ -1,0 +1,50 @@
+.hiddenCheckbox:checked + label img,
+.imgContainer img:hover  {
+    outline: 4px solid #000000;
+}
+.hiddenCheckbox:checked + label p ,
+.imgContainer:hover p{
+    color: #000000;
+    transition: color 0.1s ease-in-out;
+}
+.imgContainer {
+    padding: 10px;
+}
+.imgContainer p {
+    color: #7b7b7b;
+}
+.imageGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    width: 100%;
+}
+
+/* Extra small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+    .imageGrid {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 480px and up) */
+@media (min-width: 480px) and (max-width: 720px) {
+    .imageGrid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
+
+/* Extra Large & Large devices (landscape tablets, laptops/desktops, 1024px and up) */
+@media (min-width: 720px) and (max-width: 1440px) {
+    .imageGrid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+}
+
+/* Extra extra large devices (very large desktops, 1440px and up) */
+@media (min-width: 1440px) {
+    .imageGrid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}

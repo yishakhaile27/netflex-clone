@@ -1,0 +1,262 @@
+.container {
+    min-height: 100vh;
+    background: #0f0f0f;
+    color: #f5f5f5;
+}
+
+.content {
+    width: min(100% - 64px, 1440px);
+    margin: 0 auto;
+    padding: 42px 0 64px;
+}
+
+.pageHeader {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 38px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #303030;
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    color: #e50914;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.pageHeader h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1;
+}
+
+.subtitle {
+    margin: 10px 0 0;
+    color: #aaa;
+    line-height: 1.5;
+}
+
+.totalCount,
+.sectionHeading > span {
+    color: #bdbdbd;
+    font-size: 0.9rem;
+}
+
+.section {
+    margin: 0 0 42px;
+}
+
+.sectionHeading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.sectionHeading h2 {
+    margin: 0;
+    font-size: clamp(1.25rem, 3vw, 1.6rem);
+}
+
+.sectionHeading > span {
+    display: inline-grid;
+    min-width: 26px;
+    height: 26px;
+    place-items: center;
+    padding: 0 7px;
+    border-radius: 999px;
+    background: #252525;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px 16px;
+}
+
+.movieItem {
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #292929;
+    border-radius: 8px;
+    background: #191919;
+    transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.movieItem:hover,
+.movieItem:focus-within {
+    transform: translateY(-3px);
+    border-color: #555;
+    box-shadow: 0 8px 22px #0008;
+}
+
+.openMovie {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.openMovie:focus-visible,
+.deleteButton:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: -3px;
+}
+
+.moviePoster,
+.posterPlaceholder {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    background: #242424;
+}
+
+.posterPlaceholder {
+    display: grid;
+    place-items: center;
+    padding: 12px;
+    box-sizing: border-box;
+    color: #aaa;
+    text-align: center;
+}
+
+.movieTitle {
+    display: -webkit-box;
+    min-height: 44px;
+    overflow: hidden;
+    padding: 10px 42px 10px 12px;
+    color: #f4f4f4;
+    font-size: 0.92rem;
+    font-weight: 600;
+    line-height: 1.35;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.deleteButton {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    display: grid;
+    width: 36px;
+    height: 36px;
+    place-items: center;
+    border: 1px solid #ffffff45;
+    border-radius: 50%;
+    background: #111c;
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+    transition: background-color 160ms ease, opacity 160ms ease;
+}
+
+.movieItem:hover .deleteButton,
+.movieItem:focus-within .deleteButton {
+    opacity: 1;
+}
+
+.deleteButton:hover {
+    background: #e50914;
+}
+
+.emptySection,
+.status,
+.statusError {
+    padding: 24px;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    background: #171717;
+    color: #bdbdbd;
+    line-height: 1.5;
+}
+
+.emptySection {
+    margin: 0;
+}
+
+.status,
+.statusError {
+    text-align: center;
+}
+
+.statusError h2 {
+    margin: 0 0 8px;
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.statusError p {
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .content {
+        width: calc(100% - 32px);
+        padding: 28px 0 40px;
+    }
+
+    .pageHeader {
+        align-items: flex-start;
+        margin-bottom: 28px;
+        padding-bottom: 18px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 14px 10px;
+    }
+
+    .section {
+        margin-bottom: 32px;
+    }
+
+    .deleteButton {
+        width: 34px;
+        height: 34px;
+        opacity: 1;
+    }
+
+    .movieTitle {
+        padding: 9px 38px 9px 9px;
+        font-size: 0.84rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .content {
+        width: calc(100% - 24px);
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pageHeader {
+        gap: 10px;
+    }
+
+    .totalCount {
+        padding-top: 8px;
+        white-space: nowrap;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .movieItem,
+    .deleteButton {
+        transition: none;
+    }
+}

@@ -1,0 +1,33 @@
+.otp-input {
+    display: flex;
+}
+
+.otp-input input {
+    width: 5rem !important;
+    height: 5rem !important;
+    font-size: 4rem !important;
+    text-align: center;
+    border: none;
+    border-bottom: 4px solid #b3b3b3;
+    background: #f2f2f2;
+}
+
+.otp-input input:focus {
+    outline: 2px solid #000000;
+    border-radius: 2px;
+}
+
+.resend-otp {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: underline;
+    padding: 0;
+}
+
+.resend-otp:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}

@@ -1,0 +1,65 @@
+.save,
+.cancel{
+    padding: 14px;
+    border-radius: 2px;
+    width: 110px;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.save {
+    border: none;
+    background: #0071eb;
+    color: #fff;
+    margin-right: 10px;
+}
+.save:hover {
+    background: #057dff;
+}
+
+.cancel {
+    border: none;
+    background: #cccccc;
+    color: #000;
+}
+.cancel:hover {
+    background: #d9d9d9;
+}
+
+/* Small devices (portrait tablets and large phones, 480px and up) */
+@media (max-width: 1024px) {
+    .save,
+    .cancel{
+        width: 100px;
+        font-size: 14px;
+    }
+    .save {
+        margin-right: 10px;
+    }
+}
+
+/* Extra Large & Large devices (landscape tablets, laptops/desktops, 1024px and up) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+
+    .save,
+    .cancel{
+        width: 110px;
+        font-size: 16px;
+    }
+    .save {
+        margin-right: 10px;
+    }
+}
+
+/* Extra extra large devices (very large desktops, 1440px and up) */
+@media (min-width: 1440px) {
+    .save,
+    .cancel{
+        width: 120px;
+        font-size: 18px;
+    }
+    .save {
+        margin-right: 15px;
+    }
+}

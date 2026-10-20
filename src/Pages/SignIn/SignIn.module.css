@@ -1,0 +1,154 @@
+/* Background and main container styles */
+.signin {
+    background: url('../../Assets/Image/background.jpg') center/cover no-repeat fixed;
+    align-items: center;
+}
+
+.signin_form {
+    background-color: rgba(0, 0, 0, 0.473);
+}
+.signin_form a {
+    cursor: pointer;
+}
+
+/* Logo styles */
+.net {
+    height: 40px;
+    padding: 25px 0 10px 100px;
+}
+
+/* Form container */
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Login box styles */
+.login {
+    background: rgba(0, 0, 0, 0.662);
+    color: white;
+    width: 310px;
+    height: 580px;
+    padding: 50px 70px;
+    margin-bottom: 50px;
+}
+
+.login h1 {
+    padding-bottom: 30px;
+}
+
+/* Form inputs and buttons */
+.forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.forms a:hover {
+    color: #b4b4b4;
+    text-decoration: underline;
+}
+
+.input {
+    font-size: 16px;
+    padding: 12px 10px 8px 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color: rgba(23, 23, 23, 0.684);
+    color: white;
+    border: 1px solid #4d4d4d;
+    height: 35px;
+    width: 290px;
+}
+
+.input::placeholder {
+    color: #b7b7b7;
+    transition: color 0.3s ease;
+    font-size: 15px;
+}
+
+.input:focus {
+    border-color: rgb(255, 249, 249);
+}
+
+.input:focus::placeholder {
+    font-size: 12px;
+    transition: font-size 0.4s;
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: start;
+    position: absolute;
+    top: 25%;
+    left: 10px;
+    transform: translateY(-50%);
+    transition: font-size 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.submit {
+    background: #e60914ff;
+    color: white;
+    border: none;
+    font-weight: 500;
+    font-size: 1rem;
+    width: 310px;
+    height: 40px;
+    padding: 0px 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.submit:hover {
+    background: #c11119;
+    transition: 0.2s all;
+}
+
+/* Checkbox styles */
+.checkbox  {
+    padding: 20px 0 20px 0;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+}
+
+/* Sign up and learn more links */
+.form h4 {
+    margin-bottom: 10px;
+    color: #8c8c8c;
+    font-weight: 400;
+}
+
+.form a,
+.form h4 a {
+    color: white;
+}
+
+.form p {
+    font-size: 13px;
+    color: #8c8c8c;
+}
+
+.show_click,
+.hide a {
+    color: blue;
+}
+
+.show_click:hover {
+    transition: 2s all;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.errorText {
+    color: #eb3841;
+}

@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.auth-loading {
+  display: grid;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  place-items: center;
+  background: #0f0f0f;
+  color: #fff;
+  font-size: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+/* WebKit Browsers */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::-webkit-scrollbar-track {
+  width: 5px;
+  background: #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #707070;
+  border-radius: 10px;
+  border: 1px solid #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666565;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Define the button style */
+::-webkit-scrollbar-button:vertical {
+ background-color: #0f0f0f;
+ background-repeat: no-repeat;
+ background-size: 150%;
+ background-position: center;
+}
+
+::-webkit-scrollbar-button:vertical:decrement {
+ background-image: url("data:image/svg+xml,%3Csvg%20fill%3D%22%23707070%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22500px%22%20height%3D%22500px%22%20viewBox%3D%220%200%20130%20130%22%20enable-background%3D%22new%200%200%2052%2052%22%20xml%3Aspace%3D%22preserve%22%20version%3D%221.1%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20transform%3D%22rotate(-90)%22%3E%3Cpath%20d%3D%22M35%20109.25V20.75c0%20-2.5%203.25%20-4.25%205.5%20-2.25l53%2043.25c2%201.5%202%204.75%200%206.25L40.5%20111.75c-2.25%201.75%20-5.5%200.25%20-5.5%20-2.5%22%2F%3E%3C%2Fsvg%3E");
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+  background-image: url("data:image/svg+xml,%3Csvg%20fill%3D%22%23707070%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200px%22%20height%3D%22200px%22%20viewBox%3D%220%200%2052%2052%22%20enable-background%3D%22new%200%200%2052%2052%22%20xml%3Aspace%3D%22preserve%22%20version%3D%221.1%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20transform%3D%22matrix(1.8369701987210297e-16%2C1%2C1%2C-1.8369701987210297e-16%2C0%2C0)%22%3E%3Cpath%20d%3D%22M14%2C43.7V8.3c0-1%2C1.3-1.7%2C2.2-0.9l21.2%2C17.3c0.8%2C0.6%2C0.8%2C1.9%2C0%2C2.5L16.2%2C44.7C15.3%2C45.4%2C14%2C44.8%2C14%2C43.7z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
 }

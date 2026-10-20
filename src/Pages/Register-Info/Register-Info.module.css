@@ -1,0 +1,125 @@
+.register_info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+}
+.register_info_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+.register_info_container span {
+    font-size: 12px;
+}
+.register_info_container p {
+    padding: 5px 10% 25px 10%;
+}
+.register_info_container button {
+    background: #e60914ff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+.register_info_container button:hover {
+    background: #c11119;
+}
+
+/* Extra small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+    .register_info_container {
+        width: 280px;
+    }
+    .register_info_container img {
+        width: 200px;
+    }
+    .register_info_container h1 {
+        font-size:26px;
+    }
+    .register_info_container p {
+        font-size: 16px;
+        line-height: 23px;
+    }
+    .register_info_container button {
+        width: 270px;
+        padding: 15px;
+        font-size: 20px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 480px and up) */
+@media (min-width: 480px) and (max-width: 1024px) {
+    .register_info_container {
+        width: 350px;
+        gap: 10px;
+    }
+    .register_info_container img {
+        width: 220px;
+    }
+    .register_info_container h1 {
+        font-size:28px;
+    }
+    .register_info_container p {
+        font-size: 17px;
+        line-height: 23px;
+    }
+    .register_info_container button {
+        width: 320px;
+        padding: 15px;
+        font-size: 22px;
+    }
+}
+
+/* Extra Large & Large devices (landscape tablets, laptops/desktops, 1024px and up) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .register_info_container {
+        width: 400px;
+    }
+    .register_info_container img {
+        width: 250px;
+    }
+    .register_info_container span {
+        font-size: 13px;
+    }
+    .register_info_container p {
+        font-size: 18px;
+        line-height: 23px;
+        padding: 5px 10% 25px 10%;
+    }
+    .register_info_container button {
+        width: 400px;
+        padding: 20px;
+        font-size: 25px;
+    }
+}
+
+/* Extra extra large devices (very large desktops, 1440px and up) */
+@media (min-width: 1440px) {
+    .register_info_container {
+        width: 550px;
+        gap: 10px;
+    }
+    .register_info_container img {
+        width: 300px;
+    }
+    .register_info_container span {
+        font-size: 16px;
+    }
+    .register_info_container h1 {
+        font-size:40px;
+    }
+    .register_info_container p {
+        font-size: 26px;
+        line-height: 36px;
+        padding: 5px 10% 30px 10%;
+    }
+    .register_info_container button {
+        width: 500px;
+        padding: 20px;
+        font-size: 30px;
+    }
+}

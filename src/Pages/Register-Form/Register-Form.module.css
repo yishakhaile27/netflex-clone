@@ -1,0 +1,236 @@
+.register_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    max-height: 120vh ;
+    margin: 100px 0;
+}
+.register_form_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.register_form_container span {
+    font-size: 12px;
+}
+.register_form_container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.register_form_container form .input {
+    font-size: 16px;
+    padding: 12px 10px 8px 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    color: rgb(0, 0, 0);
+    border: 1px solid #4d4d4d;
+    outline: 1.5px solid rgb(255, 255, 255);
+}
+
+.register_form_container form .input::placeholder {
+    color: #000000;
+    transition: color 0.3s ease;
+    font-size: 15px;
+}
+
+.register_form_container form .input:focus {
+    border-color: #4d4d4d;
+    outline: 1.5px solid black ;
+}
+
+.register_form_container form .input:focus::placeholder {
+    font-size: 12px;
+    transition: font-size 0.4s;
+    display: block;
+    flex-direction: row-reverse;
+    text-align: start;
+    position: absolute;
+    top: 25%;
+    left: 10px;
+    transform: translateY(-50%);
+    transition: font-size 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+.checkboxContainer {
+    display: flex;
+    align-items: center;
+    padding: 5px 0 15px 0;
+}
+.checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #000;
+    border-radius: 2px;
+    margin-right: 10px;
+    cursor: pointer;
+    outline: none;
+}
+.checkbox:checked {
+    background-color: #000;
+}
+.checkbox:checked::after {
+    content: '✔';
+    font-size: 12px;
+    color: #fff;
+    border: 1px solid #000;
+    display: block;
+    text-align: center;
+}
+.checkboxLabel {
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+
+.register_form_container form button {
+    background: #e60914ff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+}
+.register_form_container form button:hover {
+    background: #c11119;
+}
+.errorText {
+    color: #ba312f;
+}
+
+/* Extra small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+    .register_form {
+        margin: 0px 0;
+    }
+    .register_form_container {
+        width: 280px;
+    }
+    .register_form_container h1 {
+        font-size:22px;
+    }
+    .register_form_container p {
+        font-size: 14px;
+        line-height: 23px;
+    }
+    .register_form_container form .input {
+        height: 30px;
+        width: 260px;
+    }
+    .register_form_container form label {
+        font-size: 12px;
+    }
+    .register_form_container button {
+        padding: 15px;
+        font-size: 20px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 480px and up) */
+@media (min-width: 480px) and (max-width: 1024px) {
+    .register_form {
+        margin: 50px 0;
+    }
+    .register_form_container {
+        width: 350px;
+        gap: 10px;
+    }
+    .register_form_container img {
+        width: 220px;
+    }
+    .register_form_container h1 {
+        font-size:28px;
+    }
+    .register_form_container p {
+        font-size: 17px;
+        line-height: 23px;
+    }
+    .register_form_container form .input {
+        height: 30px;
+        width: 330px;
+    }
+    .register_form_container form label {
+        font-size: 14px;
+    }
+    .register_form_container button {
+        padding: 15px;
+        font-size: 22px;
+    }
+}
+
+/* Extra Large & Large devices (landscape tablets, laptops/desktops, 1024px and up) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .register_form {
+        margin: 50px 0;
+    }
+    .register_form_container {
+        width: 420px;
+    }
+    .register_form_container img {
+        width: 250px;
+    }
+    .register_form_container span {
+        font-size: 13px;
+    }
+    .register_form_container p {
+        font-size: 18px;
+        line-height: 23px;
+    }
+    .register_form_container form .input {
+        height: 35px;
+        width: 400px;
+    }
+    .register_form_container button {
+        width: 100%;
+        padding: 20px;
+        font-size: 25px;
+    }
+}
+
+/* Extra extra large devices (very large desktops, 1440px and up) */
+@media (min-width: 1440px) {
+    .register_form {
+        margin: 0 0;
+    }
+    .register_form_container {
+        width: 550px;
+        gap: 10px;
+    }
+    .register_form_container img {
+        width: 300px;
+    }
+    .register_form_container span {
+        font-size: 16px;
+    }
+    .register_form_container h1 {
+        font-size:40px;
+    }
+    .register_form_container p {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .register_form_container form .input {
+        height: 40px;
+        width: 500px;
+        font-size: 20px;
+    }
+    .register_form_container form .input::placeholder {
+        font-size: 18px;
+    }
+    .register_form_container form label {
+        font-size: 18px;
+    }
+    .register_form_container button {
+        padding: 20px;
+        font-size: 30px;
+    }
+}

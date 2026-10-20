@@ -1,0 +1,109 @@
+/* Header */
+.navs nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 0px 20px;
+}
+/* Header logo */
+.logo {
+    width: 150px;
+}
+
+/* Header login button */
+.sign {
+    background: #ff0000ff;
+    color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 13px;
+    height: 35px;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+.sign:hover{
+    background: #c11119;
+}
+.sign a {
+    color: white;
+    text-decoration: none;
+}
+.sign a:hover {
+    text-decoration: none;
+}
+
+
+
+/* Extra extra extra small devices (small phones, 320px and down) */
+@media (max-width: 320px) {
+    .sign {
+        font-size: 11px;
+        height: 30px;
+        padding: 8px 15px 8px 15px;
+    }
+    .logo {
+        width: 100px;
+    }
+}
+
+/* Extra extra small devices (medium phones, 320px and up) */
+@media (min-width:320px) and (max-width: 425px) {
+    .sign {
+        font-size: 11px;
+        height: 30px;
+        padding: 8px 15px 8px 15px;
+    }
+    .logo {
+        width: 100px;
+    }
+}
+
+/* Extra small devices (phones, 425px and up) */
+@media (min-width: 425px) and (max-width: 640px) {
+    .sign {
+        font-size: 11px;
+        height: 30px;
+        padding: 8px 15px 8px 15px;
+    }
+    .logo {
+        width: 100px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navs nav {
+        padding: 25px 50px 0px 50px;
+    }
+}
+
+/* Large devices (laptops/desktops, 1024px and up) */
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .navs nav {
+        padding: 25px 50px 0px 50px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1440px) {
+    .navs nav {
+        padding: 25px 50px 0px 50px;
+    }
+}
+
+/* Extra extra large devices (very large desktops, 1440px and up) */
+@media (min-width: 1440px) {
+    .navs nav {
+        padding: 35px 80px 0px 80px;
+    }
+    .sign {
+        font-size: 24px;
+        height: 60px;
+        padding: 10px 20px 10px 20px;
+        border-radius: 10px;
+    }
+    .logo {
+        width: 200px;
+    }
+}

@@ -1,0 +1,538 @@
+
+.trailer {
+    min-height: 100vh;
+    background: #0f0f0f;
+    color: #f5f5f5;
+}
+
+.trailerContainer {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    background: #0f0f0f;
+}
+.trailer_banner {
+    background: #0f0f0f;
+}
+.trailer_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+    padding: clamp(28px, 5vw, 72px);
+    gap: clamp(24px, 4vw, 56px);
+    min-height: 400px;
+    box-sizing: border-box;
+}
+
+.posterImage {
+    flex: 0 0 clamp(180px, 23vw, 300px);
+}
+
+.posterImage img,
+.posterImage > div {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #242424;
+}
+
+.posterImage > div {
+    display: grid;
+    place-items: center;
+    color: #aaa;
+    font-size: 4rem;
+}
+.trailer_header_detail {
+    display: flex;
+    min-width: 0;
+    max-width: 850px;
+    flex-direction: column;
+    gap: 14px;
+    line-height: 1.55;
+}
+
+.trailer_header_detail h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.75rem);
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+}
+.trailer_header_detail h3 {
+    margin: 0 0 8px;
+    font-size: 1.05rem;
+}
+
+.trailer_header_detail > p {
+    color: #dedede;
+}
+
+.trailer_header_button {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 8px 0;
+}
+.trailer_header_button button {
+    min-height: 42px;
+    padding: 0 16px;
+    border: none;
+    background: #d9232f;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.trailer_mylist {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.trailer_play {
+    border-radius: 20px;
+    padding: 10px 15px;
+}
+
+.trailer_detail {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(230px, 300px);
+    width: 100%;
+    align-items: start;
+    gap: 28px;
+    padding: 24px clamp(20px, 4vw, 56px) 56px;
+    box-sizing: border-box;
+    background: #f7f7f7;
+    color: #202020;
+}
+
+.trailer_data {
+    min-width: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.trailer_data > div {
+    margin-bottom: 32px;
+}
+
+.trailer_data h2 {
+    margin: 0 0 14px;
+    font-size: 1.4rem;
+}
+
+.Media_video_poster {
+    display: flex;
+    min-width: 0;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    gap: 14px;
+    padding: 2px 2px 12px;
+    scroll-snap-type: x proximity;
+}
+
+.Media_video_poster > div,
+.trailer_play_poster {
+    position: relative;
+    flex: 0 0 auto;
+    overflow: hidden;
+    width: clamp(220px, 34vw, 440px);
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    background: #242424;
+    scroll-snap-align: start;
+}
+
+.Media_video_poster img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trailer_play_poster {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.trailer_play_poster button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.trailer_play_poster button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.cast_list, .crew_list {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    min-width: 0;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 2px 4px 15px;
+    position: relative;
+    scroll-snap-type: x proximity;
+}
+
+.cast_list::after, .crew_list::after {
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(to left, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 7%, rgba(255, 255, 255, 0) 95%, rgba(255, 255, 255, 0.911) 100%) center/cover no-repeat;
+}
+
+
+.cast_member, .crew_member {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 150px;
+    width: 150px;
+    min-height: 280px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    outline: 1px solid #e3e3e3;
+    overflow: hidden;
+    scroll-snap-align: start;
+}
+
+.castPhoto, .crewPhoto {
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.trailer_icon {
+    width: 100%;
+    height: 205px;
+    background: #dbdbdb;
+    color: #b5b5b5;
+    font-size: 72px;
+    display: grid;
+    place-items: center;
+}
+
+.cast_info , .crew_info {
+    padding: 10px;
+    text-align: start;
+}
+
+.cast_info p, .crew_info p {
+    font-size: 16px;
+    margin: 0 0 4px;
+}
+
+.cast_info span, .crew_info span {
+    font-size: 14px;
+}
+
+.Media_video_poster::-webkit-scrollbar,
+.cast_list::-webkit-scrollbar,
+.crew_list::-webkit-scrollbar {
+    height: 10px;
+}
+.Media_video_poster::-webkit-scrollbar-track,
+.cast_list::-webkit-scrollbar-track,
+.crew_list::-webkit-scrollbar-track {
+    height: 10px;
+    background: none;
+}
+.Media_video_poster::-webkit-scrollbar-thumb,
+.cast_list::-webkit-scrollbar-thumb,
+.crew_list::-webkit-scrollbar-thumb {
+    background: #dbdbdb;
+    border-radius: 10px;
+    border: none;
+}
+.Media_video_poster::-webkit-scrollbar-thumb:hover,
+.cast_list::-webkit-scrollbar-thumb:hover,
+.crew_list::-webkit-scrollbar-thumb:hover {
+    background: #bcbcbc;
+}
+.trailer_slide {
+    display: flex;
+    justify-content: space-between;
+}
+.trailer_slidebtn {
+    display: flex;
+    gap: 5px;
+}
+.trailer_slidebtn button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #000000;
+}
+
+
+
+.trailer_popup {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.786);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    padding: 24px;
+    box-sizing: border-box;
+}
+.trailer_button {
+    border: none;
+    background: none;
+    color: white;
+    height: 40px;
+    width: 40px;
+    font-size: 25px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+.trailer_button:hover {
+    background: rgb(46, 46, 46);
+    border-radius: 50%;
+    outline: 10px;
+}
+.trailer_video {
+    width: min(100%, 1000px);
+    aspect-ratio: 16 / 9;
+    position: relative;
+}
+
+.trailer_video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.tvshow {
+    display: flex;
+    width: fit-content;
+    max-width: 100%;
+    gap: 14px;
+    align-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #e3e3e3;
+    background: white;
+    box-sizing: border-box;
+}
+.showposterImage {
+    width: 70px;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.trailer_info {
+    min-width: 0;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 18px #00000012;
+}
+
+.trailer_info > p {
+    margin: 0;
+    padding: 12px 0;
+    border-bottom: 1px solid #e7e7e7;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.trailer_info > p:last-child {
+    border-bottom: 0;
+}
+
+.rating {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+    font-size: 12px;
+    margin: -10px 0 0 0;
+}
+.rating div{
+    width: 100px;
+}
+
+.vibe {
+    margin: 0 0 10px 0;
+}
+
+
+.imdb img{
+    height: 30px;
+}
+.imdb div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+    .trailer_header {
+        min-height: 0;
+        gap: 24px;
+        padding: 36px 28px;
+    }
+
+    .posterImage {
+        flex-basis: clamp(150px, 27vw, 230px);
+    }
+
+    .trailer_detail {
+        grid-template-columns: minmax(0, 1fr) 250px;
+        gap: 18px;
+        padding: 22px 24px 40px;
+    }
+
+    .trailer_data {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .trailer_header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+        padding: 24px 18px 30px;
+        background-position: center !important;
+    }
+
+    .posterImage {
+        flex-basis: auto;
+        width: min(42vw, 180px);
+    }
+
+    .trailer_header_detail {
+        width: 100%;
+        gap: 11px;
+    }
+
+    .trailer_header_detail h1 {
+        font-size: clamp(1.75rem, 9vw, 2.5rem);
+    }
+
+    .trailer_header_button {
+        gap: 8px;
+        margin: 2px 0;
+    }
+
+    .trailer_header_button button {
+        min-height: 40px;
+        padding: 0 12px;
+    }
+
+    .trailer_mylist {
+        width: 40px;
+        padding: 0 !important;
+    }
+
+    .trailer_detail {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+        padding: 20px 16px 32px;
+    }
+
+    .trailer_info {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 14px;
+        padding: 12px 16px;
+    }
+
+    .trailer_info > p {
+        font-size: 0.88rem;
+    }
+
+    .Media_video_poster > div,
+    .trailer_play_poster {
+        width: min(78vw, 360px);
+    }
+
+    .cast_member,
+    .crew_member {
+        flex-basis: 128px;
+        width: 128px;
+        min-height: 245px;
+    }
+
+    .castPhoto,
+    .crewPhoto,
+    .trailer_icon {
+        height: 170px;
+    }
+
+    .cast_info,
+    .crew_info {
+        padding: 8px;
+    }
+
+    .cast_info p,
+    .crew_info p {
+        font-size: 14px;
+    }
+
+    .cast_info span,
+    .crew_info span {
+        font-size: 12px;
+    }
+
+    .trailer_video {
+        width: 100%;
+    }
+
+    .trailer_popup {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 380px) {
+    .trailer_info {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .trailer_header {
+        padding-right: 14px;
+        padding-left: 14px;
+    }
+}

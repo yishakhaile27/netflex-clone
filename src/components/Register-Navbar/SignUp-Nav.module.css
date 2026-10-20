@@ -1,0 +1,63 @@
+.signup nav{
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.signup a {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.signup a:hover {
+    text-decoration: underline;
+}
+
+
+/* Extra small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+    .signup nav{
+        padding:15px 20px;
+    }
+    .signup img{
+        height: 30px;
+    }
+    .signup a {
+        font-size: 16px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 480px and up) */
+@media (min-width: 480px) and (max-width: 1024px) {
+    .signup nav{
+        padding: 15px 25px 10px 20px;
+    }
+    .signup img{
+        height: 35px;
+    }
+}
+
+/* Extra Large & Large devices (landscape tablets, laptops/desktops, 1024px and up) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .signup nav{
+        padding: 20px 30px 10px 30px;
+    }
+    .signup img{
+        height: 40px;
+    }
+}
+
+/* Extra extra large devices (very large desktops, 1440px and up) */
+@media (min-width: 1440px) {
+    .signup nav{
+        padding: 25px 50px 15px 50px;
+    }
+    .signup img{
+        height: 45px;
+    }
+    .signup a {
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,17 @@
+.Nav {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.allmovies {
+    min-height: 100vh;
+    padding: 20px clamp(16px, 3vw, 48px) 48px;
+    background: #0f0f0f;
+}
+
+@media (max-width: 700px) {
+    .allmovies {
+        padding: 14px 16px 32px;
+    }
+}

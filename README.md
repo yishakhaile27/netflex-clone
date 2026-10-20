@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# Netflix UI Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive React movie-streaming interface inspired by Netflix. Browse featured
+movies and TV shows, search titles, view title details and trailers, create an
+account, and keep a personal list.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Responsive movie home page with featured titles and category rows
+- Search movies and TV shows by title
+- Title details, cast, crew, media, and trailers
+- Firebase email/password authentication and profile settings
+- Save and remove movies and TV shows from My List
+- Responsive layouts for desktop, tablet, and mobile
 
-### `npm start`
+## Requirements
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Node.js and npm
+- A Firebase project with Authentication (Email/Password) and Cloud Firestore enabled
+- A TMDB API key for movie and TV data
+- An OMDb API key is optional and enables IMDb ratings
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup
 
-### `npm test`
+1. Install dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```sh
+   npm install
+   ```
 
-### `npm run build`
+2. Copy `.env.example` to `.env` and fill in the values from your Firebase,
+   TMDB, and (optionally) OMDb accounts.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   Windows PowerShell:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```powershell
+   Copy-Item .env.example .env
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   macOS/Linux:
 
-### `npm run eject`
+   ```sh
+   cp .env.example .env
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   Required settings:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   - `REACT_APP_FIREBASE_API_KEY`
+   - `REACT_APP_FIREBASE_AUTH_DOMAIN`
+   - `REACT_APP_FIREBASE_PROJECT_ID`
+   - `REACT_APP_FIREBASE_STORAGE_BUCKET`
+   - `REACT_APP_FIREBASE_MESSAGING_SENDER_ID`
+   - `REACT_APP_FIREBASE_APP_ID`
+   - `REACT_APP_TMDB_API_KEY`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   Optional settings:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   - `REACT_APP_FIREBASE_MEASUREMENT_ID`
+   - `REACT_APP_OMDB_API_KEY`
 
-## Learn More
+3. Start the development server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```sh
+   npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   The app opens at [http://localhost:3000](http://localhost:3000).
 
-### Code Splitting
+## Available scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Command | Description |
+| --- | --- |
+| `npm start` | Start the development server |
+| `npm test -- --watchAll=false` | Run the Jest test suite once |
+| `npm run build` | Create an optimized production build |
 
-### Analyzing the Bundle Size
+The test suite currently covers the TMDB API client configuration.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## API key and Firebase notes
 
-### Making a Progressive Web App
+Create your own API keys and Firebase project; do not commit your `.env` file.
+Firebase configuration and `REACT_APP_*` values are included in the browser
+bundle by Create React App. They are not server-side secrets. Restrict API keys
+to the necessary APIs and allowed domains, configure Firebase Authentication
+authorized domains and Firestore security rules, and use a backend proxy for
+any key that must remain confidential.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Project structure
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `src/Pages/` — route-level pages
+- `src/components/` — shared navigation, movie rows, banners, and UI components
+- `src/Api/` — API requests and Axios client
+- `src/Context/` — authentication and signup context
+- `src/Router/` — application routes and protected routes
+- `src/Services/` — Firebase initialization

@@ -1,0 +1,115 @@
+.avater {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #141414;
+}
+.avater nav{
+    align-self: flex-start;
+}
+.avatarContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+.avatarContainer h1{
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 400;
+    padding-bottom: 50px;
+}
+
+.imgContainer p {
+    color: #adadad;
+}
+.hiddenCheckbox:checked + label img,
+.imgContainer img:hover  {
+    outline: 2px solid #ffffff;
+}
+.hiddenCheckbox:checked + label p ,
+.imgContainer:hover p{
+    color: #fff;
+    transition: color 0.1s ease-in-out;
+}
+
+.avater button {
+    margin: 10% 0 60px 0;
+    border: none;
+    background: none;
+    color: #9c9c9c;
+    border: 1.2px solid #adadad;
+    border-radius: 50px;
+    padding: 8px 15px;
+    font-size: 14px;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+}
+.avater button:hover {
+    color: #fff;
+    border-color: white;
+}
+.error {
+    color: #eb3841;
+}
+
+  /* Extra small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+    .avater nav{
+        padding: 15px 30px 15px 20px;
+    }
+    .avater nav img{
+        height: 30px;
+    }
+    .avatarContainer h1{
+        font-size: 26px;
+    }
+    .avater button {
+        font-size: 10px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 480px and up) */
+@media (min-width: 480px) and (max-width: 720px) {
+    .avater nav{
+        padding: 15px 25px 10px 20px;
+    }
+    .avater nav img{
+        height: 35px;
+    }
+    .avatarContainer h1{
+        font-size: 32px;
+    }
+    .avater button {
+        font-size: 12px;
+    }
+}
+
+/* Extra Large & Large devices (landscape tablets, laptops/desktops, 1024px and up) */
+@media (min-width: 720px) and (max-width: 1440px) {
+    .avater nav{
+        padding: 20px 30px 10px 30px;
+    }
+    .avater nav img{
+        height: 40px;
+    }
+}
+
+/* Extra extra large devices (very large desktops, 1440px and up) */
+@media (min-width: 1440px) {
+    .avater nav{
+        padding: 25px 50px 15px 50px;
+    }
+    .avater nav img{
+        height: 45px;
+    }
+    .avatarContainer h1{
+        font-size: 46px;
+    }
+    .avater button {
+        font-size: 18px;
+    }
+}

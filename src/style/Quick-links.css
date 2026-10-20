@@ -1,0 +1,99 @@
+.Quick {
+    padding: 20px 40px;
+    background: #f2f2f2;
+    height: 100vh;
+}
+.Quick h1 {
+    padding-bottom: 10px;
+}
+.Quick h2 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #4d4d4d;
+}
+.Quick p {
+    font-size: 20px;
+    color: #4d4d4d;
+}
+.Quick span {
+    color: #333333;
+    font-size: 14px;
+}
+.Quick a {
+    color: #007bff;
+    font-size: 14px;
+}
+.Quick input {
+    width: 450px;
+    height: 25px;
+    padding: 12px 10px 8px 10px;
+    border-radius: 5px;
+    border: 1px solid #8c8c8c;
+}
+.Quick input::placeholder {
+    font-size: 16px;
+    color: #8c8c8c;
+}
+.Quick input:focus{
+    border: 1px solid #007bff;
+    outline: none;
+}
+.Quick input:focus::placeholder{
+    font-size: 12px;
+}
+.changepassword .inputs input{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+}
+/* Extra small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+    .Quick {
+        padding: 15px 20px;
+    }
+    .Quick h1 {
+        font-size: 24px;
+    }
+    .Quick p {
+        font-size: 14px;
+    }
+    .Quick span {
+        font-size: 10px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 480px and up) */
+@media (min-width: 480px) and (max-width: 1024px) {
+    .Quick {
+        padding: 20px 30px;
+    }
+    .Quick h1 {
+        font-size: 30px;
+    }
+    .Quick p {
+        font-size: 16px;
+    }
+    .Quick span {
+        font-size: 12px;
+    }
+}
+
+/* Extra Large & Large devices (landscape tablets, laptops/desktops, 1024px and up) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .Quick h1 {
+        font-size: 36px;
+    }
+}
+
+/* Extra extra large devices (very large desktops, 1440px and up) */
+@media (min-width: 1440px) {
+    .Quick h1 {
+        font-size: 42px;
+    }
+    .Quick p {
+        font-size: 24px;
+    }
+    .Quick span {
+        font-size: 18px;
+    }
+}

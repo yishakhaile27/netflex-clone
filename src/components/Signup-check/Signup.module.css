@@ -1,0 +1,258 @@
+/* Titel */
+.signup_form p {
+    text-align: center;
+    padding: 40px 0 8px 0;
+}
+
+/* Container */
+.signup {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+/* Input Form */
+.email {
+    padding: 6px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+.signup .email {
+    background-color: rgba(23, 23, 23, 0.684) ;
+    color: white;
+    border: 1px solid #4d4d4d;
+    border-radius: 5px;
+}
+input::placeholder {
+    color: #e3e4e4;
+    transition: color 0.3s ease;
+}
+input:focus {
+    border-color: rgb(255, 249, 249);
+}
+input:focus::placeholder {
+    font-size: 12px;
+    transition: font-size 0.4s;
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: start;
+    position: absolute;
+    top: 30%;
+    left: 10px;
+    transform: translateY(-50%);
+    transition: font-size 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+/* Submit Button */
+.signup .submit {
+    background: #ff0000ff;
+    color: white;
+    border: none;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 8px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.submit svg {
+    padding: 0;
+    height: 1.2rem;
+}
+.signup .submit:hover{
+    background: #c11119;
+}
+.signup a:hover {
+    background: none;
+}
+
+
+.errorText{
+    color: #eb3841;
+    position: absolute;
+}
+
+
+/* Extra extra small devices (medium phones, 425px and up) */
+@media  (max-width: 425px) {
+    .info {
+        padding: 40px 0 5px 0;
+    }
+    .signup_form p {
+        font-size: 9px;
+    }
+    .email {
+        font-size: 10px;
+    }
+    .signup .email {
+        height: 20px;
+        width:  180px;
+    }
+    input:focus::placeholder {
+        font-size: 10px;
+    }
+    .signup .submit {
+        font-size: 0.65rem;
+        height: 33px;
+    }
+    .submit svg {
+        height: 0.65rem;
+    }
+    .signup .submitb1 {
+        width: 90px;
+    }
+}
+
+/* Extra small devices (phones, 425px and up) */
+@media (min-width: 425px) and (max-width: 640px) {
+    .signup_form p {
+        font-size: 12px;
+    }
+    .email {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .signup .email {
+        height: 20px;
+        width:  250px;
+    }
+    .signup .submit {
+        font-size: 0.8rem;
+        height: 40px;
+    }
+    .submit svg {
+        height: 0.8rem;
+    }
+    .signup .submitb1 {
+        width: 110px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 640px and up) */
+@media (min-width: 640px) and (max-width: 768px) {
+    .signup_form p {
+        font-size: 14px;
+    }
+    .email {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .signup .email {
+        height: 25px;
+        width:  280px;
+    }
+    .signup .submit {
+        font-size: 1rem;
+        height: 46px;
+    }
+    .submit svg {
+        height: 1rem;
+    }
+    .signup .submitb1 {
+        width: 130px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .info {
+        padding: 70px 0 0 0;
+    }
+    .signup_form p {
+        font-size: 15px;
+    }
+    .signup {
+        padding: 5px 0;
+    }
+    .email {
+        font-size: 16px;
+        padding: 10px;
+    }
+    .signup .email {
+        height: 25px;
+        width:  300px;
+    }
+    input:focus::placeholder {
+        font-size: 14px;
+    }
+    .signup .submit {
+        height: 45px;
+        font-size: 1.1rem;
+    }
+    .signup .submitb1 {
+        width: 140px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .info {
+        padding: 70px 0 0 0;
+    }
+    .signup_form p {
+        font-size: 15px;
+    }
+    .welcome {
+        font-size: 1.5rem;
+    }
+    .signup {
+        padding: 5px 0;
+    }
+    .email {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .signup .email {
+        height: 28px;
+        width:  330px;
+    }
+    input:focus::placeholder {
+        font-size: 14px;
+    }
+    .signup .submit {
+        height: 48px;
+        font-size: 1.2rem;
+    }
+    .signup .submitb1 {
+        width: 150px;
+    }
+}
+
+/* Extra extra large devices (very large desktops, 1440px and up) */
+@media (min-width: 1440px) {
+    .info {
+        padding: 70px 0 0 0;
+    }
+    .signup_form p {
+        font-size: 26px;
+    }
+    .signup {
+        padding: 5px 0;
+    }
+    .email {
+        font-size: 30px;
+        padding: 14px;
+    }
+    .signup .email {
+        height: 50px;
+        width:  600px;
+    }
+    input:focus::placeholder {
+        font-size: 24px;
+    }
+    .signup .submit {
+        font-size: 1.7rem;
+        border-radius: 8px;
+        height: 75px;
+    }
+    .submit svg {
+        height: 1.7rem;
+    }
+    .signup .submitb1 {
+        width: 220px;
+    }
+}
