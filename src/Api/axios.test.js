@@ -1,6 +1,7 @@
-jest.mock('axios', () => jest.requireActual('axios/dist/browser/axios.cjs'));
-
 import instance from './axios';
+import requests from './Requests';
+
+jest.mock('axios', () => jest.requireActual('axios/dist/browser/axios.cjs'));
 
 const originalApiKey = process.env.REACT_APP_TMDB_API_KEY;
 
@@ -34,6 +35,15 @@ test('adds the TMDB API key to requests that do not already have one', async () 
     const response = await instance.get('/movie/123', { adapter: mockAdapter });
 
     expect(response.config.params.api_key).toBe('test-tmdb-key');
+});
+
+test('adds the TMDB API key to shared movie endpoints', async () => {
+    process.env.REACT_APP_TMDB_API_KEY = 'test-tmdb-key';
+
+    const response = await instance.get(requests.fetchAllMovies, { adapter: mockAdapter });
+
+    expect(response.config.params.api_key).toBe('test-tmdb-key');
+    expect(response.config.url).toBe('/movie/popular?language=en-US');
 });
 
 test('does not attach the TMDB API key to external API requests', async () => {
